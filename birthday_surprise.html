@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Birthday Surprise ❤️</title>
+<style>
+*{box-sizing:border-box}html,body{margin:0;padding:0;width:100%;height:100%}
+body{background:#18091d;color:white;font-family:Arial,sans-serif;overflow:hidden}
+.page{width:100%;height:100vh;position:absolute;top:0;left:0;display:none;justify-content:center;align-items:center;text-align:center;overflow:hidden;background:radial-gradient(circle at center,#632743,#38132f 45%,#18091d)}
+.page.show{display:flex}.sparkle{position:absolute;color:#ffd85c;font-size:25px;animation:sparkle 2s infinite}.a{top:12%;left:10%}.b{top:20%;right:12%}.c{top:40%;left:7%}.d{top:48%;right:8%}.e{bottom:20%;left:12%}.f{bottom:15%;right:12%}.g{bottom:28%;right:30%}
+@keyframes sparkle{0%,100%{opacity:.2;transform:scale(.7)}50%{opacity:1;transform:scale(1.2)}}
+.content{width:90%;max-width:400px;position:relative;z-index:5}.small{color:#efb9ce;font-size:13px;letter-spacing:2px;margin-bottom:20px}
+h1{font-size:31px;line-height:1.3;margin:0}.text{color:#f4dce7;font-size:16px;line-height:1.7}.heart{font-size:75px;margin:25px 0;animation:heart 1.2s infinite}
+@keyframes heart{0%,100%{transform:scale(1)}50%{transform:scale(1.15)}}
+button{border:0;outline:0;margin-top:25px;padding:15px 32px;border-radius:30px;background:#ff5c7d;color:white;font-size:17px;font-weight:bold;cursor:pointer;box-shadow:0 8px 25px rgba(255,80,120,.35)}
+button:active{transform:scale(.95)}.birthdayBox{width:90%;max-width:390px;padding:35px 20px;border-radius:28px;background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15)}
+.birthdayBox h1{font-size:32px}.cake{font-size:90px;margin:25px 0 10px;animation:cake 1s infinite alternate}
+@keyframes cake{from{transform:translateY(0)}to{transform:translateY(-8px)}}.wish{color:#ffd96b;font-size:17px}
+.balloonPage{flex-direction:column;padding:20px}.balloonTitle{font-size:29px;margin:0 0 10px}.subtitle{color:#e8c7d9;line-height:1.6;font-size:16px;max-width:380px}
+.balloons{display:flex;justify-content:center;gap:8px;margin:30px 0 20px}.balloon{width:52px;height:68px;border-radius:50%;display:flex;justify-content:center;align-items:center;color:white;font-weight:bold;font-size:18px;cursor:pointer;box-shadow:inset -7px -8px 12px rgba(0,0,0,.2),0 6px 15px rgba(0,0,0,.3);transition:.2s}.balloon:active{transform:scale(.9)}
+.red{background:#ff5572}.yellow{background:#ffc83d}.blue{background:#55b9ff}.purple{background:#a968ed}.green{background:#42d39a}
+.reason{width:92%;max-width:380px;padding:20px;border-radius:20px;background:rgba(30,8,27,.45);border:1px solid #9d527e;display:none;animation:reasonShow .4s ease}
+@keyframes reasonShow{from{opacity:0;transform:translateY(15px)}to{opacity:1;transform:translateY(0)}}.reasonTitle{color:#ffd75d;font-weight:bold;font-size:18px;margin-bottom:12px}.reasonText{font-size:16px;line-height:1.6}.next{color:#ffd75d;font-size:14px;margin-top:12px}
+.letter{width:92%;max-width:410px;max-height:82vh;overflow:auto;padding:25px;background:#fff0d0;color:#62402e;border-radius:10px;text-align:left;box-shadow:0 10px 35px rgba(0,0,0,.5)}
+.letter h2{text-align:center;font-family:cursive}.letter p{font-family:cursive;font-size:17px;line-height:1.8}.signature{text-align:right;font-family:cursive;font-size:19px}
+@media(max-width:380px){h1{font-size:28px}.heart{font-size:65px}.balloon{width:47px;height:62px}.balloons{gap:5px}.reasonText{font-size:15px}}
+</style>
+</head>
+<body>
+
+<div id="page1" class="page show">
+<span class="sparkle a">✨</span><span class="sparkle b">✦</span><span class="sparkle c">✨</span><span class="sparkle d">✦</span><span class="sparkle e">✨</span><span class="sparkle f">✦</span><span class="sparkle g">✨</span>
+<div class="content"><div class="small">A LITTLE SURPRISE FOR YOU 💌</div>
+<h1>I CREATE SOMETHING<br>FOR YOU BACCHA 😚</h1><div class="heart">❤️</div>
+<div class="text">I made this little surprise just for you...<br>So take a deep breath and let the magic begin ✨</div>
+<button onclick="showPage(2)">Start Surprise ✨</button></div></div>
+
+<div id="page2" class="page">
+<span class="sparkle a">✨</span><span class="sparkle b">✦</span><span class="sparkle c">✨</span><span class="sparkle d">✦</span><span class="sparkle e">✨</span><span class="sparkle f">✦</span><span class="sparkle g">✨</span>
+<div class="birthdayBox"><h1>✨ Happy Birthday,<br>Ashwin! ❤️</h1><p>Today is all about you, Baccha ❤️</p><div class="cake">🎂</div><div class="wish">Make a wish... ✨</div>
+<button onclick="showPage(3)">Continue ❤️</button></div></div>
+
+<div id="page3" class="page balloonPage">
+<span class="sparkle a">✨</span><span class="sparkle b">✦</span><span class="sparkle c">✨</span><span class="sparkle d">✦</span><span class="sparkle e">✨</span><span class="sparkle f">✦</span>
+<h1 class="balloonTitle">Pop The Balloons 🎈</h1>
+<div class="subtitle">Tap them one by one ❤️<br>Each balloon has a reason why you're so special to me. 🥺❤️</div>
+<div class="balloons">
+<div id="balloon1" class="balloon red" onclick="popBalloon(1)">1</div>
+<div id="balloon2" class="balloon yellow" onclick="popBalloon(2)">2</div>
+<div id="balloon3" class="balloon blue" onclick="popBalloon(3)">3</div>
+<div id="balloon4" class="balloon purple" onclick="popBalloon(4)">4</div>
+<div id="balloon5" class="balloon green" onclick="popBalloon(5)">5</div>
+</div>
+<div id="reason" class="reason"><div id="reasonTitle" class="reasonTitle"></div><div id="reasonText" class="reasonText"></div></div>
+<div id="next" class="next">Pop Balloon 1 🎈</div>
+<button id="letterButton" style="display:none" onclick="showPage(4)">Open My Letter 💌</button>
+</div>
+
+<div id="page4" class="page"><div class="letter">
+<h2>Dear Ashwin ❤️</h2>
+<p>Happy Birthday, My Love ❤️🎂<br><br>
+Today is not just your birthday. It is a reminder of how lucky I am to have you in my life.<br><br>
+You mean so much to me.<br><br>
+Thank you for always being there for me, for understanding me, for making me smile, and for accepting me exactly the way I am.<br><br>
+You are one of the most special people in my life.<br><br>
+I hope this birthday brings you lots of happiness, love and beautiful memories.<br><br>
+I love you more than words can explain.<br><br>
+Happy Birthday once again, my love! ❤️</p>
+<div class="signature">With all my love,<br>Pratiksha ❤️</div>
+</div></div>
+
+<script>
+function showPage(number){
+for(let i=1;i<=4;i++) document.getElementById("page"+i).style.display="none";
+document.getElementById("page"+number).style.display="flex";
+}
+var reasons=["","My safe place 🤍 — You make me feel understood, comfortable, and safe to be myself.","You make my ordinary days special ✨ — Even small moments feel happier when I have you.","You stand by me 🫶🏻 — Your support gives me strength when things get difficult.","You understand the real me 🥺 — You know my moods, my craziness, my flaws, and still choose me.","You’re a part of my future ❤️ — You’re not just someone I love today; you’re someone I want beside me in the days to come."];
+var currentBalloon=1;
+function popBalloon(number){
+if(number!=currentBalloon){document.getElementById("next").innerHTML="Pop Balloon "+currentBalloon+" first 🎈";return;}
+document.getElementById("balloon"+number).style.display="none";
+document.getElementById("reason").style.display="block";
+document.getElementById("reasonTitle").innerHTML="REASON "+number+" ❤️";
+document.getElementById("reasonText").innerHTML=reasons[number];
+currentBalloon++;
+if(currentBalloon<=5) document.getElementById("next").innerHTML="Now pop Balloon "+currentBalloon+" 🎈";
+else {document.getElementById("next").innerHTML="All 5 reasons revealed! 🎉❤️";document.getElementById("letterButton").style.display="inline-block";}
+}
+</script>
+</body>
+</html>
